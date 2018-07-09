@@ -7,13 +7,19 @@ int Character::GenerateLifeTime() {
     return lifetime;
 };
 
+
 void Character::WriteYear(int currentYear) {
     year = currentYear;
 };
 
 int Character::GetCurrentYear() { 
     return year;
-}
+};
+
+int Character::GetLifetime() {
+    return lifetime;
+};
+
 
 
 
