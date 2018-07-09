@@ -1,24 +1,19 @@
 #include <iostream>
+#include "life.hpp"
 
 void Life();
-void FallInLove();
-
-bool IsAlive();
+void FirstLove();
 
 int CurrentYear;
 
-int GenerateLifeTime()
-{
-    srand(time(NULL));
-    return rand() % 100;
-}
+Character nero;
 
 int main()
 {
-    int Years = GenerateLifeTime();
+    int Years = nero.GenerateLifeTime();
 
-    for (Years; Years >= 0; --Years) {
-        CurrentYear = Years;
+    for (; Years >= 0; --Years) {
+        nero.WriteYear(Years);
         Life();
     }
     return 0;
@@ -26,18 +21,19 @@ int main()
 
 void Life()
 {
-    if (CurrentYear == 23) {
-        FallInLove();
+    if (nero.GetCurrentYear() == 23) {
+        FirstLove();
     }
 }
 
-void FallInLove()
+
+void FirstLove()
 {
+    int TheEnd = 215;
     for (int Day = 0; Day < 365; Day++ ) {
-        if (Day >= 215) {
-            std::cout << "End of love" << std::endl;
+        std::cout << "Day " << Day << std::endl;
+        if (Day >= TheEnd) {
             break;
         }
-        std::cout << Day<< std::endl;
     }
 }

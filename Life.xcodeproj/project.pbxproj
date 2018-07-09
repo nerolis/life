@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A41BC88120F349AD003A41E2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A41BC88020F349AD003A41E2 /* main.cpp */; };
+		A42DDA1820F413160016AE73 /* life.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A42DDA1620F413160016AE73 /* life.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		A41BC87D20F349AD003A41E2 /* Life */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Life; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41BC88020F349AD003A41E2 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A42DDA1620F413160016AE73 /* life.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = life.cpp; sourceTree = "<group>"; };
+		A42DDA1720F413160016AE73 /* life.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = life.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				A41BC88020F349AD003A41E2 /* main.cpp */,
+				A42DDA1620F413160016AE73 /* life.cpp */,
+				A42DDA1720F413160016AE73 /* life.hpp */,
 			);
 			path = Life;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A41BC88120F349AD003A41E2 /* main.cpp in Sources */,
+				A42DDA1820F413160016AE73 /* life.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
