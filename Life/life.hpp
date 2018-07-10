@@ -1,4 +1,6 @@
 #include <string>
+#include <vector>
+#include <iostream>
 
 class Character {
 public:
@@ -10,5 +12,10 @@ public:
 private:
     int lifetime;
     int year;
+
     bool isAlive;
+
+    std::vector<std::string> skills = {};
+
+    std::string status;
 };

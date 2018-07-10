@@ -36,7 +36,7 @@ void FirstLove()
     int End = 215;
     for (int Day = 0; Day < 365; Day++ ) {
         std::cout << "Day: " << Day << std::endl;
-        if (Day >= TheEnd) {
+        if (Day == End) {
             break;
         }
     }
