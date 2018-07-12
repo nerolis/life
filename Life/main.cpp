@@ -46,7 +46,8 @@ void Life()
 }
 
 void FirstLove()
-{   nero.LearnSkill("Love");
+{
+    nero.LearnSkill("Love");
     int End = 215;
     for (int Day = 0; Day < 365; Day++ ) {
         std::cout << "Day: " << Day << std::endl;
