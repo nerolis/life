@@ -32,27 +32,36 @@ void Life()
     }
 
     if (nero.GetCurrentYear() == 22) {
+        nero.AddStatus("Inspiration");
         nero.LearnSkill("Javascript");
     }
 
     if (nero.GetCurrentYear() == 23) {
+        nero.AddStatus("Fulltime job");
+        nero.UnlearnSkill("Javascript");
+        nero.LearnSkill("Advanced JavaScript");
+        nero.LearnSkill("Base c# Unity");
+        nero.LearnSkill("Base c++");
         FirstLove();
     }
 
     if (nero.GetCurrentYear() == nero.GetLifetime() -1) {
-        nero.GetSkills();
         std::cout << "End" << std::endl;
     }
 }
 
 void FirstLove()
 {
+    nero.AddStatus("Fall in love");
     nero.LearnSkill("Love");
+    nero.AddStatus("Productivity + 200%");
     int End = 215;
     for (int Day = 0; Day < 365; Day++ ) {
-        std::cout << "Day: " << Day << std::endl;
         if (Day == End) {
             nero.UnlearnSkill("Love");
+            nero.RemoveStatus("Productivity + 200%");
+            nero.RemoveStatus("Fall in love");
+            nero.AddStatus("Depression");
             break;
         }
     }

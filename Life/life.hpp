@@ -14,8 +14,8 @@ public:
     void UnlearnSkill(std::string skill);
     void GetSkills();
 
-    void AddStatus();
-    void RemoveStatus();
+    void AddStatus(std::string status);
+    void RemoveStatus(std::string status);
     void GetStatus();
 
 private:

@@ -35,30 +35,40 @@ void Character::GetSkills() {
 
 void Character::UnlearnSkill(std::string skill) {
     std::string deleted;
-    std::vector<std::string>::size_type i = 0;
-    while ( i < Skills.size() ) {
+    for (int i = 0; i < Skills.size(); i++) {
         if (Skills[i] == skill) {
             deleted = Skills[i];
             Skills.erase(Skills.begin() + i);
-        } else {
-            ++i;
+            break;
         }
     }
     std::cout << "Unlearned: " << deleted << std::endl;
 };
 
-void Character::AddStatus() { 
-    <#code#>;
+void Character::AddStatus(std::string status) {
+    Statuses.push_back(status);
+    std::cout << "Affected by: " << status << std::endl;
 }
 
 
-void Character::RemoveStatus() { 
-    <#code#>;
+void Character::RemoveStatus(std::string status) {
+    std::string removed;
+    for (int i = 0; i < Statuses.size(); i++) {
+        if (Statuses[i] == status) {
+            removed = Statuses[i];
+            Statuses.erase(Statuses.begin() + i);
+            break;
+        }
+    }
+    std::cout << "Status removed: " << removed << std::endl;
 }
 
 
 void Character::GetStatus() { 
-    <#code#>;
+    std::cout << "Statuses: " << std::endl;
+    for (int i = 0; i < Statuses.size(); i++) {
+        std::cout << Statuses[i] << std::endl;
+    }
 }
 
 
