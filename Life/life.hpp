@@ -18,6 +18,8 @@ public:
     void RemoveStatus(std::string status);
     void GetStatus();
 
+    void Clear();
+
 private:
     int lifetime;
     int year;

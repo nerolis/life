@@ -3,7 +3,7 @@
 #include <iostream>
 
 int Character::GenerateLifeTime() {
-    srand(time(NULL));
+    srand((unsigned int)time(NULL));
     lifetime = rand() % 100 + 23;
     return lifetime;
 };
@@ -27,10 +27,11 @@ void Character::LearnSkill(std::string skill) {
 };
 
 void Character::GetSkills() {
-    std::cout << "Skills: " << std::endl;
+    std::cout << "Skills: ";
     for (int i = 0; i < Skills.size(); i++) {
-        std::cout << Skills[i] << std::endl;
+        std::cout << Skills[i] << ", ";
     }
+    std::cout << std::endl;
 }
 
 void Character::UnlearnSkill(std::string skill) {
@@ -65,11 +66,25 @@ void Character::RemoveStatus(std::string status) {
 
 
 void Character::GetStatus() { 
-    std::cout << "Statuses: " << std::endl;
+    std::cout << "Statuses: ";
     for (int i = 0; i < Statuses.size(); i++) {
-        std::cout << Statuses[i] << std::endl;
+        std::cout << Statuses[i] << ", ";
     }
+    std::cout << std::endl;
 }
+
+void Character::Clear() {
+    std::cout << "-------------------" << std::endl;
+    std::cout << "Life summary at the end; " << std::endl;
+    GetStatus();
+    Statuses.clear();
+
+    GetSkills();
+    Skills.clear();
+    std::cout << "-------------------" << std::endl;
+    std::cout << "End." << std::endl;
+}
+
 
 
 

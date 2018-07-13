@@ -46,7 +46,7 @@ void Life()
     }
 
     if (nero.GetCurrentYear() == nero.GetLifetime() -1) {
-        std::cout << "End" << std::endl;
+        nero.Clear();
     }
 }
 
