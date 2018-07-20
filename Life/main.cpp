@@ -52,12 +52,21 @@ void Life()
 
 void FirstLove()
 {
-    nero.AddStatus("Fall in love");
-    nero.LearnSkill("Love");
-    nero.AddStatus("Productivity + 200%");
-    int End = 215;
+    int Break = 215;
     for (int Day = 0; Day < 365; Day++ ) {
-        if (Day == End) {
+        if (Day == 31) {
+            nero.AddStatus("Fall in love");
+        }
+
+        if (Day == 62) {
+            nero.LearnSkill("Love");
+        }
+
+        if (Day == 100) {
+            nero.AddStatus("Productivity + 200%");
+        }
+
+        if (Day == Break) {
             nero.UnlearnSkill("Love");
             nero.RemoveStatus("Productivity + 200%");
             nero.RemoveStatus("Fall in love");
