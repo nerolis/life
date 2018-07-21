@@ -13,11 +13,11 @@ void Character::WriteYear(int currentYear) {
     year = currentYear;
 };
 
-int Character::GetCurrentYear() { 
+int Character::GetCurrentYear() const {
     return year;
 };
 
-int Character::GetLifetime() {
+int Character::GetLifetime() const {
     return lifetime;
 };
 
@@ -26,7 +26,7 @@ void Character::LearnSkill(std::string skill) {
     std::cout << "Learned: " << skill << std::endl;
 };
 
-void Character::GetSkills() {
+void Character::GetSkills() const {
     std::cout << "Skills: ";
     for (int i = 0; i < Skills.size(); i++) {
         std::cout << Skills[i] << ", ";
@@ -65,7 +65,7 @@ void Character::RemoveStatus(std::string status) {
 }
 
 
-void Character::GetStatus() { 
+void Character::GetStatus() const{
     std::cout << "Statuses: ";
     for (int i = 0; i < Statuses.size(); i++) {
         std::cout << Statuses[i] << ", ";
@@ -73,7 +73,7 @@ void Character::GetStatus() {
     std::cout << std::endl;
 }
 
-void Character::Clear() {
+void Character::SummaryLifeAndClear() {
     std::cout << "-------------------" << std::endl;
     std::cout << "Life summary at the end; " << std::endl;
     GetStatus();
@@ -84,6 +84,17 @@ void Character::Clear() {
     std::cout << "-------------------" << std::endl;
     std::cout << "End." << std::endl;
 }
+
+void Character::setName(std::string _name) {
+    name = _name;
+    std::cout << "Now character name is: " << name << std::endl;
+}
+
+void Character::getName() const {
+    std::cout << "character name is" << name << std::endl;
+}
+
+
 
 
 

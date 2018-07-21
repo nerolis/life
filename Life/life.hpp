@@ -5,20 +5,23 @@
 class Character {
 public:
     int GenerateLifeTime();
-    int GetLifetime();
-    int GetCurrentYear();
+    int GetLifetime() const;
+    int GetCurrentYear() const;
 
     void WriteYear(int currentYear);
 
     void LearnSkill(std::string skill);
     void UnlearnSkill(std::string skill);
-    void GetSkills();
+    void GetSkills() const;
 
     void AddStatus(std::string status);
     void RemoveStatus(std::string status);
-    void GetStatus();
+    void GetStatus() const;
 
-    void Clear();
+    void SummaryLifeAndClear() ;
+
+    void setName(std::string _name);
+    void getName() const;
 
 private:
     int lifetime;
@@ -26,6 +29,7 @@ private:
 
     bool isAlive;
 
+    std::string name;
     std::vector<std::string> Skills;
     std::vector<std::string> Statuses;
 };

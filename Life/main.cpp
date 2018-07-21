@@ -4,11 +4,19 @@
 void Life();
 void FirstLove();
 
+int CreateCharacter();
+
 Character nero;
+int PopCharacter() {
+    nero.setName("nerorenelis");
+    return nero.GenerateLifeTime();
+}
 
 int main()
 {
-    for (int Year = 0; Year < nero.GenerateLifeTime(); Year++) {
+    // Every year of life we do Life();
+    int GeneratedYears = PopCharacter();
+    for (int Year = 0; Year < GeneratedYears; Year++) {
         std::cout << "Year: " << Year << std::endl;
         nero.WriteYear(Year);
         Life();
@@ -40,13 +48,13 @@ void Life()
         nero.AddStatus("Fulltime job");
         nero.UnlearnSkill("Javascript");
         nero.LearnSkill("Advanced JavaScript");
-        nero.LearnSkill("Base c# Unity");
+        nero.LearnSkill("Base c#");
         nero.LearnSkill("Base c++");
         FirstLove();
     }
 
     if (nero.GetCurrentYear() == nero.GetLifetime() -1) {
-        nero.Clear();
+        nero.SummaryLifeAndClear();
     }
 }
 
