@@ -67,7 +67,7 @@ void FirstLove()
         }
 
         if (Day == 62) {
-            nero.LearnSkill("Love");
+            nero.AddStatus("Love");
         }
 
         if (Day == 100) {
@@ -75,7 +75,7 @@ void FirstLove()
         }
 
         if (Day == Break) {
-            nero.UnlearnSkill("Love");
+            nero.RemoveStatus("Love");
             nero.RemoveStatus("Productivity + 200%");
             nero.RemoveStatus("Fall in love");
             nero.AddStatus("Depression");
