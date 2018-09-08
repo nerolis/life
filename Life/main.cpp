@@ -63,11 +63,11 @@ void FirstLove()
     int Break = 215;
     for (int Day = 0; Day < 365; Day++ ) {
         if (Day == 31) {
-            nero.AddStatus("Fall in love");
+            nero.AddStatus("Love");
         }
 
         if (Day == 62) {
-            nero.AddStatus("Love");
+            nero.AddStatus("Fall in love");
         }
 
         if (Day == 100) {
